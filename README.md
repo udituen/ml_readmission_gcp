@@ -20,3 +20,16 @@ ml-readmission-gcp/
 ├── .github/workflows/deploy.yml
 ├── README.md
 ```
+
+
+
+### GCP Services in use
+
+```
+GCP Account
+   └── ml-readmission-gcp
+          ├── Cloud Run service
+          ├── Images
+          ├── Logs
+          └── Permissions
+```
