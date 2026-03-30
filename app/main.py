@@ -29,7 +29,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Diabetes Readmission Prediction API",
     description="Production MLOps pipeline — XGBoost model served via FastAPI on GCP Cloud Run",
-    version="1.0.0",
+    version="2.0.0",
     lifespan=lifespan
 )
 
@@ -47,7 +47,7 @@ HYPHEN_COLS = {
 def root():
     return {
         "service": "Diabetes Readmission Prediction API",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "docs": "/docs",
         "health": "/health"
     }
