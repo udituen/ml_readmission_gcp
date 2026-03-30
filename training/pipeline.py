@@ -1,8 +1,3 @@
-# step 1: import data, define cat, num and med columns
-# step 2: split into X and y
-# step 3: train test split 80:20
-# step 4: build pipelines for cat, num, med
-# step 5: apply column transformers
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline, make_pipeline
