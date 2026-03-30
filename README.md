@@ -3,21 +3,21 @@ MLOps pipeline deployed on GCP for the task of predicting the readmission rate o
 
 ```
 ml-readmission-gcp/
-│
 ├── app/
+│   ├── __init__.py
 │   ├── main.py
-│   ├── model_loader.py
-│
-├── training/
-│   ├── train.py
-│   ├── preprocess.py
-│
+│   └── schema.py
 ├── models/
-│   └── model.pkl
-│
-├── requirements.txt
+│   └── xgb_model_v2.pkl
+├── data/
+│   └── diabetic_data.csv
+├── train
+│   ├── train.py        
 ├── Dockerfile
-├── .github/workflows/deploy.yml
+├── requirements.txt
+└── .github/
+    └── workflows/
+        └── deploy.yml
 ├── README.md
 ```
 
