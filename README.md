@@ -8,34 +8,7 @@ A production-grade MLOps pipeline that trains, serves, and automatically deploys
 
 ## Architecture
 
-```
-
-                CI/CD Trigger                        
-            Git Push → main branch
-                       │
-                       ▼
-                GitHub Actions                             
-      1. Authenticate via OIDC (Workload Identity Federation)    
-      2. Build Docker image                                      
-      3. Push to GCP Artifact Registry                          
-      4. Deploy to Cloud Run         
-                    Runtime: ~2m 30s  
-                       │
-                       ▼
-              GCP Artifact Registry                           
-         Docker image tagged with git SHA                     
-                       │
-                       ▼
-                  GCP Cloud Run                              
-              FastAPI prediction service                     
-      Latency: ~110ms warm | <320ms cold start               
-                       │
-                       ▼
-                  Inference Pipeline                              
-      Pydantic validation → ColumnTransformer → XGBoost          
-      Output: prediction + probability + label                   
-
-```
+<img width="391" height="601" alt="architecture" src="https://github.com/user-attachments/assets/fc8672ff-0765-42b0-ad14-ba5eee018874" />
 
 ---
 
