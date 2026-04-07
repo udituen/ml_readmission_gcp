@@ -9,7 +9,7 @@ from xgboost import XGBClassifier
 import joblib 
 
 def main():
-    data = pd.read_csv("./data/diabetic_data.csv")
+    data = pd.read_csv("./data/raw/diabetic_data.csv")
     print(data.head())
 
     X = data.iloc[:,0:50]
